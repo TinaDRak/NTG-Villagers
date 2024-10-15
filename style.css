@@ -48,6 +48,7 @@ h2 {
 
 
 .countdown-container {
+    color: white;  
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
@@ -58,9 +59,6 @@ h2 {
     flex: 1 0 120px; /* Allow each item to be flexible */
     margin: 10px; /* Add margin around each countdown element */
     padding: 10px;
-    background-color: #fff; /* Background for countdown elements */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
 .big-text {
@@ -68,7 +66,7 @@ h2 {
     line-height: 1;
     margin: 0 3rem;
     font-weight: bold;
-    color: #ff0000; /* Softer, festive color */
+    color: #f7e8dc; /* Softer, festive color */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -78,7 +76,7 @@ h2 {
 
 .countdown-el span {
     font-size: 1.5rem;
-    color: #ff0000;
+    color: #f7e8dc;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
@@ -105,6 +103,12 @@ h2 {
 nav {
     margin-top: 2rem;
     z-index: 2;
+}
+
+nav li {
+        display: block; /* Stack navigation links vertically */
+        margin: 5px 0; /* Space between links */
+    }
 }
 
 nav ul {
