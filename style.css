@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("https://images.pexels.com/photos/2004391/pexels-photo-2004391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
+    position: relative;
+    color: #fff; /* Text color for contrast */
+}
+
+/* Add overlay for readability */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust transparency */
+    z-index: 1;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Softer shadow for elegance */
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+
+.countdown-container {
+    color: white;
+    display: flex;
+    margin-bottom: 5rem;
+    z-index: 2;
+}
+
+.big-text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 3rem;
+    font-weight: bold;
+    color: #f7e8dc; /* Softer, festive color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+.video-container {
+    margin: 0;
+    z-index: 2;
+}
+
+.text-box {
+    max-width: 800px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
+    color: #000; /* Dark text color */
+    border-radius: 8px;
+    margin: 0; /* Adjust this value as needed for space     below the video */
+    z-index: 2;
+}
+
+.text-box h2 {
+    margin: 0 0 1rem;
+}
+
+nav {
+    margin-top: 2rem;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff; /* Link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.video-container {
+    position: relative; /* Required for the absolute positioning of the iframe */
+    width: 100%; /* Make the container full width */
+    max-width: 800px; /* Maximum width for larger screens */
+    padding-bottom: 56.25%; /* Maintain aspect ratio (16:9) */
+    margin: 0;
+    z-index: 2;
+}
+
+.video-container iframe {
+    position: absolute; /* Position the iframe absolutely within the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 90%; /* Use 90% of the screen width for smaller devices */
+        padding-bottom: 75%; /* Adjust aspect ratio if desired */
+    }
+}
