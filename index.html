@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - NTG Villagers Countdown</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="test.css">
+    
+    </head>
+    <body>
+            <h1>An NTG Village Christmas</h1>
+            <h2>Check back early morning Dec 27</h2>
+
+            <div class="countdown-container">
+                <div class="countdown-el days-c">
+                 <p class="big-text" id="days">0</p>
+                 <span>days</span>
+                </div>
+                <div class="countdown-el hours-c">
+                    <p class="big-text" id="hours">0</p>
+                    <span>hours</span>
+                </div>
+                <div class="countdown-el mins-c">
+                    <p class="big-text" id="mins">0</p>
+                    <span>mins</span>
+                </div>
+                <div class="countdown-el seconds-c">
+                    <p class="big-text" id="seconds">0</p>
+                    <span>seconds</span>
+                </div>
+            </div>
+
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="montana.html">Montana</a></li>
+                <li><a href="amanda.html">Amanda</a></li>
+                <li><a href="jessica.html">Jessica</a></li>
+                <li><a href="scarlett.html">Scarlett</a></li>
+            </ul>
+        </nav>      
+      
+        <!-- JSS -->
+    <script>
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minsEl = document.getElementById('mins');
+        const secondsEl = document.getElementById('seconds');
+
+        const targetDate = new Date('December 27, 2024 00:00:00 PST'); // Update the target date here
+
+        function updateCountdown() {
+            const currentTime = new Date();
+            const diff = targetDate - currentTime;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            daysEl.innerHTML = days;
+            hoursEl.innerHTML = hours;
+            minsEl.innerHTML = mins;
+            secondsEl.innerHTML = seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
