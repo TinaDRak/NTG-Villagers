@@ -50,17 +50,19 @@ h2 {
 .countdown-container {
     color: white;
     display: flex;
-    margin-bottom: 5rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 20px 0; /* Add some space around the countdown */
     z-index: 2;
 }
 
-.big-text {
-    font-size: 6rem;
-    line-height: 1;
-    margin: 0 3rem;
-    font-weight: bold;
-    color: #f7e8dc; /* Softer, festive color */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+.countdown-el {
+    flex: 1 0 120px; /* Allow each item to be flexible */
+    margin: 10px; /* Add margin around each countdown element */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
 }
 
 .countdown-el {
@@ -73,6 +75,15 @@ h2 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 }
 
+
+.big-text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 3rem;
+    font-weight: bold;
+    color: #f7e8dc; /* Softer, festive color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
 
 .video-container {
     margin: 0;
@@ -99,13 +110,13 @@ nav {
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none; /* Remove bullet points */
+    padding: 0
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    display: inline; /* Inline for horizontal links */
+    margin: 0 15px; /* Space between links */
 }
 
 nav ul li a {
@@ -116,6 +127,12 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
 }
 
 .video-container {
@@ -136,9 +153,25 @@ nav ul li a:hover {
 }
 
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .video-container {
         max-width: 90%; /* Use 90% of the screen width for smaller devices */
         padding-bottom: 75%; /* Adjust aspect ratio if desired */
     }
+  h1 {
+        font-size: 2em; /* Adjust heading size on small screens */
+    }
+    
+    h2 {
+        font-size: 1.2em; /* Adjust subheading size */
+    }
+
+    .countdown-el {
+        flex: 1 0 100%; /* Make countdown elements full width */
+    }
+
+    nav li {
+        display: block; /* Stack navigation links vertically */
+        margin: 5px 0; /* Space between links */
+  }
 }
