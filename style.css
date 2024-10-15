@@ -37,15 +37,23 @@ h1, h2 {
 h1 {
     font-size: 3rem;
     text-align: center;
-    margin: 0;
+    margin: 0.1;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     margin: 0;
 }
 
+.big-text {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 0 3rem;
+    font-weight: 900;
+    color: #ffffff; /* Softer, festive color */
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Stronger text shadow for pop */
+}
 
 .countdown-container {
     color: white;  
@@ -58,19 +66,10 @@ h2 {
 .countdown-el {
     flex: 1 0 150px; /* Allow each item to be flexible */
     margin: 10px; /* Add margin around each countdown element */
-    padding: 20px;
+    padding: 15px;
       background-color: rgba(255, 255, 255, 0.2); /* Subtle background to make text stand out */
     border-radius: 10px;
-    border: 2px solid #f7e8dc; /* Border matching the text color */
-}
-
-.big-text {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin: 0 3rem;
-    font-weight: 900;
-    color: #fff700; /* Softer, festive color */
-    text-shadow: 4px 4px 12px rgba(0, 0, 0, 1); /* Stronger text shadow for pop */
+    border: 2px solid #000000; /* Border matching the text color */
 }
 
 .countdown-el {
@@ -79,7 +78,8 @@ h2 {
 
 .countdown-el span {
     font-size: 1.8rem;
-    color: #fff700; /* Match the countdown number color */
+    font-weight: bold;
+    color: #ffffff; /* Match the countdown number color */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); /* Bolder shadow */
 }
 
