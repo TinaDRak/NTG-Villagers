@@ -112,7 +112,6 @@ nav li {
         display: block; /* Stack navigation links vertically */
         margin: 5px 0; /* Space between links */
     }
-}
 
 nav ul {
     list-style: none;
