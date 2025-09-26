@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     margin: 0;
     font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
@@ -158,5 +158,11 @@ nav ul li a:hover {
     }
     nav {
         margin-top: auto;   /* <-- This pushes nav to bottom of the flex column */
+    }
+}
+
+@media (min-width: 769px) {
+    body {
+        justify-content: center; /* center everything vertically on desktop */
     }
 }
