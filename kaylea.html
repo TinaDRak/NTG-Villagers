@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Kaylea - Wedding Instructions</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        body {
+            background-image: url("https://i.ibb.co/6JXrtdLx/Kaylea.jpg");
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif; /* Modern font */
+            position: relative;
+            color: #fff; /* Text color for contrast */
+        }
+
+        /* Add overlay for readability */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin: 0;
+            z-index: 2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-container {
+            margin: 0;
+            z-index: 2;
+        }
+
+        .text-box {
+            max-width: 800px;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
+            color: #000; /* Dark text color */
+            border-radius: 8px;
+            margin: 0; /* Adjust this value as needed for space     below the video */
+            z-index: 2;
+        }
+
+        .text-box h2 {
+            margin: 0 0 1rem;
+        }
+
+        nav {
+            margin-top: 2rem;
+            z-index: 2;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff; /* Link color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .video-controls {
+            margin: 1rem;
+            z-index: 2;
+        }
+
+        .video-controls button {
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #000; /* Dark text color */
+            font-weight: bold;
+        }
+
+        .video-controls button:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <h1>Agent Kaylea</h1>
+
+    <div class="video-container">
+<iframe src="https://player.vimeo.com/video/1120337993?badge=0&amp;autopause=0&amp;player_id=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video - Kaylea"></iframe>
+
+        </div>
+
+        </div>
+  
+
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="kaylea.html">Kaylea</a></li>
+            <li><a href="amanda.html">Amanda</a></li>
+            <li><a href="montana.html">Montana</a></li>
+            <li><a href="jessica.html">Jessica</a></li>
+            <li><a href="scarlett.html">Scarlett</a></li>
+        </ul>
+    </nav>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+        const iframe = document.querySelector('iframe');
+        const player = new Vimeo.Player(iframe);
+
+        document.getElementById('play').addEventListener('click', function() {
+            player.play().catch(function(error) {
+                console.error('Error playing the video:', error);
+            });
+        });
+
+        document.getElementById('pause').addEventListener('click', function() {
+            player.pause().catch(function(error) {
+                console.error('Error pausing the video:', error);
+            });
+        });
+    </script>
+</body>
+</html>
