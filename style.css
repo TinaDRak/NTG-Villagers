@@ -156,4 +156,7 @@ nav ul li a:hover {
         max-width: 90%; /* Use 90% of the screen width for smaller devices */
         padding-bottom: 75%; /* Adjust aspect ratio if desired */
     }
+    nav {
+        margin-top: auto;   /* <-- This pushes nav to bottom of the flex column */
+    }
 }
