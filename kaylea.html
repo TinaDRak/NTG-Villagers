@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Kaylea - Wedding Instructions</title>
+    <!-- External stylesheet still loads, but inline style below overrides it -->
     <link rel="stylesheet" href="style.css">
+
     <style>
+        /* ===== INLINE OVERRIDES ===== */
         body {
             background-image: url("https://i.ibb.co/6JXrtdLx/Kaylea.jpg");
             background-size: cover;
@@ -17,116 +20,91 @@
             justify-content: flex-start;
             min-height: 100vh;
             margin: 0;
-            font-family: 'Poppins', sans-serif; /* Modern font */
+            font-family: 'Poppins', sans-serif;
             position: relative;
-            color: #fff; /* Text color for contrast */
+            color: #fff;
         }
 
-        /* Add overlay for readability */
+        /* Dark overlay for text readability */
         body::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
 
         h1 {
             font-size: 3.5rem;
             text-align: center;
-            margin: 0;
+            margin: 1rem 0;
             z-index: 2;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        h2 {
-            font-size: 2rem;
-            text-align: center;
-            margin: 0;
-            z-index: 2;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
         }
 
         .video-container {
-            margin: 0;
-            z-index: 2;
-        }
-
-        .text-box {
+            position: relative;
+            width: 90%;
             max-width: 800px;
-            padding: 2rem;
-            background-color: rgba(255, 255, 255, 0.8); /* Light background for text */
-            color: #000; /* Dark text color */
-            border-radius: 8px;
-            margin: 0; /* Adjust this value as needed for space     below the video */
+            padding-top: 56.25%; /* 16:9 ratio */
             z-index: 2;
+            margin-bottom: 1rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
-        .text-box h2 {
-            margin: 0 0 1rem;
-        }
-
+        /* Fixed nav bar across bottom */
         nav {
-            margin-top: 2rem;
-            z-index: 2;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+            z-index: 3;
         }
-
         nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             list-style: none;
-            padding: 0;
+            padding: 0.5rem 0;
+            margin: 0;
         }
-
         nav ul li {
-            display: inline;
             margin: 0 1rem;
         }
-
         nav ul li a {
-            color: #fff; /* Link color */
+            color: #fff;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1rem;
         }
-
         nav ul li a:hover {
-            text-decoration: underline; /* Underline on hover */
+            text-decoration: underline;
         }
 
-        .video-controls {
-            margin: 1rem;
-            z-index: 2;
-        }
-
-        .video-controls button {
-            margin: 0 0.5rem;
-            padding: 0.5rem 1rem;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #000; /* Dark text color */
-            font-weight: bold;
-        }
-
-        .video-controls button:hover {
-            background-color: rgba(255, 255, 255, 0.9);
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav ul li { margin: 0 0.5rem; }
         }
     </style>
 </head>
+
 <body>
     <h1>Agent Kaylea</h1>
 
     <div class="video-container">
-<iframe src="https://player.vimeo.com/video/1120337993?badge=0&amp;autopause=0&amp;player_id=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Video - Kaylea"></iframe>
-
-        </div>
-
-        </div>
-  
-
-
+        <iframe src=" https://player.vimeo.com/video/1120337993?badge=0&amp;autopause=0&amp;player_id=0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            title="Video - Scarlett"></iframe>
+    </div>
 
     <nav>
         <ul>
@@ -143,18 +121,6 @@
     <script>
         const iframe = document.querySelector('iframe');
         const player = new Vimeo.Player(iframe);
-
-        document.getElementById('play').addEventListener('click', function() {
-            player.play().catch(function(error) {
-                console.error('Error playing the video:', error);
-            });
-        });
-
-        document.getElementById('pause').addEventListener('click', function() {
-            player.pause().catch(function(error) {
-                console.error('Error pausing the video:', error);
-            });
-        });
     </script>
 </body>
 </html>
